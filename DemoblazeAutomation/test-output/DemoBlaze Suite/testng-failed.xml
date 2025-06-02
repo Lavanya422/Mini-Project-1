@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [DemoBlaze Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.demoblaze.listeners.ExtentTestListener"/>
+  </listeners>
+  <test name="Demoblaze Functional Tests">
+    <packages>
+      <package name="com.demoblaze.testcases"/>
+    </packages>
+    <classes>
+      <class name="com.demoblaze.testcases.BaseTest"/>
+      <class name="com.demoblaze.testcases.CartTest"/>
+      <class name="com.demoblaze.testcases.LoginTest"/>
+      <class name="com.demoblaze.testcases.LogoutTest"/>
+      <class name="com.demoblaze.testcases.PlaceOrderTest"/>
+      <class name="com.demoblaze.testcases.SignUpTest"/>
+    </classes>
+  </test> <!-- Demoblaze Functional Tests -->
+  <test name="Demoblaze Functional Tests(failed)">
+    <classes>
+      <class name="com.demoblaze.testcases.LogoutTest">
+        <methods>
+          <include name="testLogoutFunctionality"/>
+          <include name="setUpPages"/>
+        </methods>
+      </class> <!-- com.demoblaze.testcases.LogoutTest -->
+      <class name="com.demoblaze.testcases.LoginTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.demoblaze.testcases.LoginTest -->
+      <class name="com.demoblaze.testcases.SignUpTest">
+        <methods>
+          <include name="testValidSignUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.demoblaze.testcases.SignUpTest -->
+      <class name="com.demoblaze.testcases.CartTest">
+        <methods>
+          <include name="testAddToCartAndPlaceOrder"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.demoblaze.testcases.CartTest -->
+      <class name="com.demoblaze.testcases.PlaceOrderTest">
+        <methods>
+          <include name="setUpPages"/>
+          <include name="testPlaceOrder"/>
+        </methods>
+      </class> <!-- com.demoblaze.testcases.PlaceOrderTest -->
+    </classes>
+  </test> <!-- Demoblaze Functional Tests(failed) -->
+</suite> <!-- Failed suite [DemoBlaze Suite] -->
